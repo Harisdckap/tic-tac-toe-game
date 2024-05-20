@@ -1,3 +1,4 @@
+
 "use strict";
 
 // Initially hide the success alert message
@@ -8,6 +9,11 @@ document.getElementById('confetti').style.display = 'none';
 const cells = document.querySelectorAll('.cell');
 const message = document.querySelector('.alert');
 
+// Get audio elements
+const xSound = document.getElementById('x-sound');
+const oSound = document.getElementById('o-sound');
+const backsound =document.getElementById('back-sound');
+
 // Set the initial player to 'X' and initialize the game board
 let currentPlayer = 'X';
 let gameBoard = Array(9).fill(null);
@@ -16,7 +22,6 @@ let gameBoard = Array(9).fill(null);
 cells.forEach((cell, index) => {
   cell.addEventListener('click', (event) => handleCellClick(event, index));
 });
-
 
 // Function to handle cell click events
 function handleCellClick(event, index) {
@@ -27,7 +32,14 @@ function handleCellClick(event, index) {
   const cell = event.target;
   gameBoard[index] = currentPlayer;
   cell.textContent = currentPlayer;
-  
+
+  // Play the corresponding sound
+  if (currentPlayer === 'X') {
+    xSound.play();
+  } else {
+    oSound.play();
+  }
+
   cell.removeEventListener('click', (event) => handleCellClick(event, index));
 
   if (checkWinner()) {
@@ -35,9 +47,10 @@ function handleCellClick(event, index) {
     document.getElementById('confetti').style.display = 'block';
     message.innerHTML = `Congratulations! ${currentPlayer} wins the game`;
     removeAllEventListeners();
+    backsound.play();
   } else if (isBoardFull()) {
     document.getElementById('success-alert').style.display = 'block';
-    message.innerHTML = "It's a tie X and O!";
+    message.innerHTML = "It's a tie!";
   } else {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
   }
@@ -67,12 +80,7 @@ function checkWinner() {
 
 // Function to check if the board is full
 function isBoardFull() {
-  for (let cell of gameBoard) {
-    if (cell === null) {
-      return false;
-    }
-  }
-  return true;
+  return gameBoard.every(cell => cell !== null);
 }
 
 // Function to remove all event listeners from the cells
@@ -87,13 +95,6 @@ let refreshBtn = document.getElementById('refreshbtn');
 refreshBtn.addEventListener('click', () => {
   window.location.reload();
 });
-
-
-
-
-
-
-
 
 
 
