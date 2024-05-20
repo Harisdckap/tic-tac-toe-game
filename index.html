@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="./images/Group 1000015049.png" alt="">
+  <div class="confetti-container" id="confetti">
+    <div class="confetti">
+      <i style="--speed: 10; --bg: yellow" class="square"></i>
+      <i style="--speed: 18; --bg: white" class="pentagram"></i>
+      <i style="--speed: 29; --bg: green" class="rectangle"></i>
+      <i style="--speed: 17; --bg: blue" class="hexagram"></i>
+      <i style="--speed: 33; --bg: red" class="pentagram"></i>
+      <i style="--speed: 26; --bg: yellow" class="dodecagram"></i>
+      <i style="--speed: 24; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 5; --bg: blue" class="wavy-line"></i>
+      <i style="--speed: 40; --bg: white" class="square"></i>
+      <i style="--speed: 17; --bg: green" class="rectangle"></i>
+      <i style="--speed: 25; --bg: white" class="square"></i>
+      <i style="--speed: 18; --bg: green" class="rectangle"></i>
+      <i style="--speed: 15; --bg: yellow" class="wavy-line"> </i>
+      <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+      <i style="--speed: 25; --bg: white" class="square"></i>
+      <i style="--speed: 18; --bg: green" class="rectangle"></i>
+      <i style="--speed: 37; --bg: yellow" class="dodecagram"></i>
+      <i style="--speed: 23; --bg: pink" class="wavy-line"></i>
+      <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+      <i style="--speed: 37; --bg: pink" class="wavy-line"></i>
+      <i style="--speed: 36; --bg: white" class="hexagram"></i>
+      <i style="--speed: 32; --bg: green" class="wavy-line"></i>
+      <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+      <i style="--speed: 29; --bg: white" class="square"></i>
+      <i style="--speed: 18; --bg: green" class="rectangle"></i>
+      <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+      <i style="--speed: 23; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 30; --bg: pink" class="rectangle"></i>
+      <i style="--speed: 30; --bg: red" class="square"></i>
+      <i style="--speed: 18; --bg: red" class="pentagram"></i>
+      <i style="--speed: 19; --bg: green" class="rectangle"></i>
+      <i style="--speed: 16; --bg: blue" class="hexagram"></i>
+      <i style="--speed: 23; --bg: red" class="pentagram"></i>
+      <i style="--speed: 34; --bg: yellow" class="dodecagram"></i>
+      <i style="--speed: 39; --bg: pink" class="wavy-line"></i>
+      <i style="--speed: 40; --bg: purple" class="square"></i>
+      <i style="--speed: 21; --bg: green" class="rectangle"></i>
+      <i style="--speed: 14; --bg: white" class="square"></i>
+      <i style="--speed: 38; --bg: green" class="rectangle"></i>
+      <i style="--speed: 19; --bg: red" class="dodecagram"></i>
+      <i style="--speed: 29; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 21; --bg: white" class="hexagram"></i>
+      <i style="--speed: 17; --bg: purple" class="wavy-line"></i>
+      <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+      <i style="--speed: 23; --bg: white" class="square"></i>
+      <i style="--speed: 18; --bg: green" class="rectangle"></i>
+      <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+      <i style="--speed: 48; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 38; --bg: pink" class="rectangle"></i>
+      <i style="--speed: 13; --bg: red" class="pentagram"></i>
+      <i style="--speed: 49; --bg: yellow" class="dodecagram"></i>
+      <i style="--speed: 19; --bg: cyan" class="wavy-line"></i>
+      <i style="--speed: 15; --bg: steelblue" class="square"></i>
+      <i style="--speed: 10; --bg: yellow" class="square"></i>
+      <i style="--speed: 18; --bg: white" class="pentagram"></i>
+      <i style="--speed: 29; --bg: green" class="rectangle"></i>
+      <i style="--speed: 17; --bg: blue" class="hexagram"></i>
+      <i style="--speed: 33; --bg: red" class="pentagram"></i>
+      <i style="--speed: 26; --bg: yellow" class="dodecagram"></i>
+      <i style="--speed: 24; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 5; --bg: white" class="wavy-line"></i>
+      <i style="--speed: 40; --bg: purple" class="square"></i>
+      <i style="--speed: 17; --bg: green" class="rectangle"></i>
+      <i style="--speed: 25; --bg: white" class="square"></i>
+      <i style="--speed: 18; --bg: green" class="rectangle"></i>
+      <i style="--speed: 15; --bg: cyan" class="wavy-line"> </i>
+      <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+      <i style="--speed: 45; --bg: white" class="square"></i>
+      <i style="--speed: 18; --bg: green" class="rectangle"></i>
+      <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+      <i style="--speed: 23; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+      <i style="--speed: 37; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 26; --bg: white" class="hexagram"></i>
+      <i style="--speed: 32; --bg: cyan" class="wavy-line"></i>
+      <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+      <i style="--speed: 45; --bg: white" class="square"></i>
+      <i style="--speed: 18; --bg: green" class="rectangle"></i>
+      <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+      <i style="--speed: 23; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 50; --bg: pink" class="rectangle"></i>
+      <i style="--speed: 30; --bg: red" class="square"></i>
+      <i style="--speed: 18; --bg: red" class="pentagram"></i>
+      <i style="--speed: 19; --bg: green" class="rectangle"></i>
+      <i style="--speed: 16; --bg: blue" class="hexagram"></i>
+      <i style="--speed: 23; --bg: red" class="pentagram"></i>
+      <i style="--speed: 33; --bg: yellow" class="dodecagram"></i>
+      <i style="--speed: 39; --bg: white" class="wavy-line"></i>
+      <i style="--speed: 40; --bg: orange" class="square"></i>
+      <i style="--speed: 21; --bg: green" class="rectangle"></i>
+      <i style="--speed: 14; --bg: white" class="square"></i>
+      <i style="--speed: 38; --bg: green" class="rectangle"></i>
+      <i style="--speed: 19; --bg: red" class="dodecagram"></i>
+      <i style="--speed: 29; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 34; --bg: white" class="hexagram"></i>
+      <i style="--speed: 17; --bg: indigo" class="wavy-line"></i>
+      <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+      <i style="--speed: 23; --bg: white" class="square"></i>
+      <i style="--speed: 18; --bg: green" class="rectangle"></i>
+      <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+      <i style="--speed: 48; --bg: pink" class="wavy-line"> </i>
+      <i style="--speed: 38; --bg: pink" class="rectangle"></i>
+      <i style="--speed: 13; --bg: red" class="pentagram"></i>
+      <i style="--speed: 49; --bg: yellow" class="dodecagram"></i>
+      <i style="--speed: 19; --bg: purple" class="wavy-line"></i>
+      <i style="--speed: 15; --bg: cyan" class="square"></i>
+    </div>
+  </div>
+  <div id="success-alert" class="flex items-center justify-center  p-4 mb-4 text-sm text-green-800 bg-green-50 rounded-lg dark:bg-gray-800 dark:text-green-400 absolute w-11/12 md:w-1/2 lg:w-1/3 top-4">
+    <span class="font-medium alert"></span> 
+  </div>
+  <div class="tot">
+  <div id="game" class="bg-black p-8 rounded-lg shadow-lg w-80 md:w-96 mt-48">
+    <h1 class="text-2xl font-bold text-center text-white mb-4">Tic-Tac-Toe</h1>
+    <div id="board" class="grid grid-cols-3 gap-2">
+      <div class="cell border-2 border-gray-500 flex items-center justify-center h-20 w-20 text-2xl text-white cursor-pointer"></div>
+      <div class="cell border-2 border-gray-500 flex items-center justify-center h-20 w-20 text-2xl text-white cursor-pointer"></div>
+      <div class="cell border-2 border-gray-500 flex items-center justify-center h-20 w-20 text-2xl text-white cursor-pointer"></div>
+      <div class="cell border-2 border-gray-500 flex items-center justify-center h-20 w-20 text-2xl text-white cursor-pointer"></div>
+      <div class="cell border-2 border-gray-500 flex items-center justify-center h-20 w-20 text-2xl text-white cursor-pointer"></div>
+      <div class="cell border-2 border-gray-500 flex items-center justify-center h-20 w-20 text-2xl text-white cursor-pointer"></div>
+      <div class="cell border-2 border-gray-500 flex items-center justify-center h-20 w-20 text-2xl text-white cursor-pointer"></div>
+      <div class="cell border-2 border-gray-500 flex items-center justify-center h-20 w-20 text-2xl text-white cursor-pointer"></div>
+      <div class="cell border-2 border-gray-500 flex items-center justify-center h-20 w-20 text-2xl text-white cursor-pointer"></div>
+    </div>
+  </div>
+  <button class="w-1/3 flex justify-center items-center flex items-center px-4 py-2 mt-4 font-medium text-black bg-white rounded-lg hover:bg-gray-500 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-80" id="refreshbtn">
+    <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+    </svg>
+    <span>Refresh</span>
+  </button>
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
