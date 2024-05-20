@@ -1,47 +1,67 @@
+
+
 body {
-    background-image: url('./images/5739638.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
+  margin: 0;
+  height: 100vh; /* Use viewport height for full coverage */
+  overflow: hidden;
 }
 
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure the video stays behind all content */
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+  transform: translate(-50%, -50%);
+}
+
+/* Rest of your styles */
 .tot {
-    display: grid;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 
 div#success-alert {
-    left: 26rem;
-    top: 6rem;
+  left: 26rem;
+  top: 6rem;
 }
 
-
-
 #success-alert {
-    display: none;
+  display: none;
 }
 
 #animationCanvas {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid black;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
 }
 
 @media (max-width: 400px) {
-    #game {
-        width: 90%;
-        padding: 1rem;
-        margin-top: 4rem;
-    }
+  #game {
+      width: 90%;
+      padding: 1rem;
+      margin-top: 4rem;
+  }
 
-    .cell {
-        height: 60px;
-        width: 60px;
-        font-size: 1.5rem;
-    }
+  .cell {
+      height: 60px;
+      width: 60px;
+      font-size: 1.5rem;
+  }
 }
 
 
